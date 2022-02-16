@@ -3,11 +3,11 @@
 
 <ul>
   <% @restaurants.each do |restaurant| %>
-    <li>
+    <div>
     <%= link_to restaurant.name,restaurant_path(restaurant)  %>
     <p><%= restaurant.address %></p>
-    </li>
+    </div>
   <% end %>
 </ul>
 
-<%= link_to "Add a new restaurant", new_restaurant_path %>
+<%= link_to 'Add a restaurant', new_restaurant_path, class: "btn btn-outline-primary" %>
